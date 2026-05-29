@@ -1,659 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somnath Mali | Full Stack Developer</title>
-    <meta name="theme-color" content="#00ff9d" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Somnath Mali | Full Stack Developer</title>
+<meta name="theme-color" content="#00ff9d">
+<meta name="description" content="Portfolio of Somnath Mali — Full-Stack Developer specializing in PHP, Laravel, CodeIgniter, FastAPI, Python, React, AI/LLM Integration, and Cybersecurity.">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="terminal">
-                <div class="prompt">&lt;Emperor /&gt;</div>
-            </div>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+
+<nav>
+  <div class="nav-inner">
+    <div class="terminal-logo">
+      <span class="bracket">&lt;</span>Emperor<span class="bracket">/&gt;</span>
+      <span class="cursor-blink"></span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">about</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#certifications">certs</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-status">
+        <div class="status-dot"></div>
+        <span class="status-text">Available for hire &nbsp;·&nbsp; Full-time & Freelance &nbsp;·&nbsp; Mumbai / Remote</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="first">Somnath</span><br>
+        <span class="last">Mali</span>
+      </h1>
+      <div class="hero-role">
+        <span class="tag">PHP / Laravel</span>
+        <span class="sep">·</span>
+        <span class="tag">FastAPI / Python</span>
+        <span class="sep">·</span>
+        <span class="tag">React / Tailwind</span>
+        <span class="sep">·</span>
+        <span class="tag">AI / ML Integration</span>
+        <span class="sep">·</span>
+        <span class="tag">DCSC Certified</span>
+      </div>
+      <div class="hero-story">
+        Started coding in a small village in Sangli with a 4G connection and a lot of free time. No bootcamp, no mentor — just Stack Overflow all day and night and broken code that somehow worked. Two years later, I'm building fintech systems and AI/LLM-powered platforms with Python.
+      </div>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+        <a href="#contact" class="btn btn-ghost"><i class="fas fa-envelope"></i> Get In Touch</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-term-wrap">
+        <div class="term-block">
+          <div class="term-titlebar">
+            <div class="term-dot r"></div><div class="term-dot y"></div><div class="term-dot g"></div>
+            <span class="term-file">somnath@codex:~$</span>
+          </div>
+          <div class="term-body">
+            <div class="term-line"><span class="p">$</span> <span class="cmd">whoami</span></div>
+            <div class="term-line"><span class="out">somnath_mali // full-stack &amp; ai developer</span></div>
+            <div class="term-line" style="margin-top:6px"><span class="p">$</span> <span class="cmd">cat experience.txt</span></div>
+            <div class="term-line"><span class="out"><span class="str">2+ years</span> @ CodeX Technologies, Mumbai</span></div>
+            <div class="term-line"><span class="out">25 matrimonial platforms · AI/LLM with Python</span></div>
+            <div class="term-line"><span class="out">DROP Security Certified ✓</span></div>
+            <div class="term-line" style="margin-top:6px"><span class="p">$</span> <span class="cmd">ls ./skills/</span></div>
+            <div class="term-line"><span class="out">backend/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;php laravel codeigniter fastapi</span></div>
+            <div class="term-line"><span class="out">frontend/&nbsp;&nbsp;&nbsp;&nbsp;react tailwind javascript</span></div>
+            <div class="term-line"><span class="out">database/&nbsp;&nbsp;&nbsp;&nbsp;mysql postgresql</span></div>
+            <div class="term-line"><span class="out">ai-ml/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;groq gemini ocr</span></div>
+            <div class="term-line"><span class="out">security/&nbsp;&nbsp;&nbsp;&nbsp;burpsuite nmap metasploit</span></div>
+            <div class="term-line"><span class="out">devops/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;docker linux git</span></div>
+            <div class="term-line" style="margin-top:6px"><span class="p">$</span> <span class="cmd">cat status</span></div>
+            <div class="term-line"><span class="out" style="color:#27c93f">● OPEN FOR WORK</span></div>
+            <div class="term-line"><span class="comment"># Mumbai · Remote · Open</span></div>
+          </div>
         </div>
-    </nav>
-    <div class="menu-overlay" id="menuOverlay"></div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="hero-stat-num">2+</span><span class="hero-stat-label">yrs experience</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">25+</span><span class="hero-stat-label">live platforms</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">₹∞</span><span class="hero-stat-label">txns processed</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">1</span><span class="hero-stat-label">security cert</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>scroll to read</span><i class="fas fa-chevron-down"></i></div>
+</section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <!-- <div class="hero-tag">FULL STACK DEVELOPER • CYBERSECURITY CERTIFIED</div> -->
-                <div class="hero-tag">Full-Stack Developer | PHP & MySQL | Laravel & CodeIgniter (3–4) | JavaScript &
-                    jQuery, React | Cybersecurity</div>
-                <h1>Somnath Mali</h1>
-                <!-- <h2>Building Secure, Scalable Web Systems</h2> -->
-                <h2>Ask me About</h2>
-                <!-- <p class="hero-description">
-                    I craft production-ready web applications with PHP, Laravel, and React.
-                    From real-time e-commerce platforms to dual-language financial systems —
-                    I ship code that works, scales, and stays secure.
-                </p> -->
-                <p class="hero-description">
-                    <strong>real-time apps</strong> that actually move money, manage users, and stay
-                    unbreakable.
-                    I build <strong>secure full-stack ecosystems</strong> using PHP, Laravel & React — engineered for
-                    <strong>speed</strong>,
-                    <strong>stability</strong>, and <strong>scale</strong>.
-                    Whether it’s <strong>e-commerce</strong>, <strong>CRM</strong>, or <strong>financial
-                        automation</strong>,
-                    I bring a <strong>cybersecurity-first mindset</strong> to every project I ship.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-rocket"></i> View Projects
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i> Get In Touch
-                    </a>
-                </div>
-            </div>
+<div class="ch-divider"><div class="ch-divider-label">// Chapter 01 — Origin Story</div></div>
+
+<section id="about">
+  <div class="section-wrap">
+    <div class="section-tag">About Me</div>
+    <h2 class="section-title reveal">Somnath <span class="accent">Mali</span></h2>
+    <div class="about-grid">
+      <div>
+        <div class="about-chapter-label reveal"><i class="fas fa-book-open"></i> Chapter 01 &nbsp;/&nbsp; The Origin</div>
+        <p class="story-para reveal d1">Grew up in Karagani, Sangli — a place where the career options were farming or government jobs. I chose a third one nobody in my family understood: coding. Started from home with HTML, then PHP because someone on a forum said it "runs on any server." Two years later, I'm building fintech systems and AI/LLM-powered platforms with Python.</p>
+        <p class="story-para reveal d1">Right now I work at <strong>CodeX Technologies in Mumbai</strong>. I've built payment systems, wallet platforms, prepaid card integrations, membership ecosystems — all handling real transactions from real users. When something breaks, there's no "works on my machine." It has to work for everyone.</p>
+        <div class="pull-quote reveal d2">
+          The difference between a tutorial and production is that in production, your bug costs someone real money. That pressure taught me more than any course ever could.
+          <cite>— Day and night debugging builds character</cite>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">About Me</div>
-                <h2 class="section-title">Security-First Developer</h2>
-                <p class="section-description">
-                    Building the future with clean code and bulletproof architecture
-                </p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Code with Purpose. Build with Precision.</h3>
-                    <p>
-                        With 2+ years of hands-on experience, I specialize in building real-time,
-                        scalable web applications that handle everything from high-traffic e-commerce
-                        platforms to complex financial systems. My work at CodeX Technologies and
-                        various freelance projects has given me deep expertise in backend architecture,
-                        RESTful APIs, and secure payment integrations.
-                    </p>
-                    <p>
-                        What sets me apart? I bring a cybersecurity mindset to every project. As a
-                        DROP Certified Security Professional, I don't just write code — I write secure,
-                        tested, and production-ready solutions that businesses can trust.
-                    </p>
-                    <p>
-                        Whether it's optimizing database queries, implementing role-based access control,
-                        or building dual-language business management systems, I focus on delivering
-                        value through clean architecture and thoughtful engineering.
-                    </p>
-                </div>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number">2+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Projects Shipped</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Client Satisfaction</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">1</div>
-                        <div class="stat-label">Security Certification</div>
-                    </div>
-                </div>
-            </div>
+        <p class="story-para reveal d2">Outside of work, I mess around with cybersecurity — CTF competitions, Burp Suite, breaking things just to understand how they work. I hold a <strong>DROP Certified Security Course</strong> cert. Knowing how systems get attacked made me a paranoid — and better — developer.</p>
+        <p class="story-para reveal d3"><strong>What I work with</strong> — PHP · Laravel · CodeIgniter 3 &amp; 4 · FastAPI · Python · MySQL · JavaScript · React · Tailwind CSS<br><br>
+        <strong>AI &amp; Automation</strong> — Groq (LLaMA) · Google Gemini · OCR (Tesseract / EasyOCR) · Google OAuth<br><br>
+        <strong>Payment Gateways</strong> — PhonePe · Razorpay · Ebix / ItzCash · GPR Card APIs<br><br>
+        <strong>Security</strong> — Burp Suite · Nmap · SQLMap · OWASP ZAP · Wireshark</p>
+      </div>
+      <div>
+        <div class="info-card reveal d1">
+          <div class="info-card-head"><i class="fas fa-id-card"></i> identity.json</div>
+          <div class="info-rows">
+            <div class="info-row"><i class="fas fa-user"></i><span>Somnath Mali</span></div>
+            <div class="info-row"><i class="fas fa-code"></i><span>Full-Stack Developer</span></div>
+            <div class="info-row"><i class="fas fa-map-marker-alt"></i><span>Karagani, Sangli, Maharashtra</span></div>
+            <div class="info-row"><i class="fas fa-phone"></i><span>+91 9022357293</span></div>
+            <div class="info-row"><i class="fas fa-envelope"></i><a href="mailto:somnath.malim46@gmail.com">somnath.malim46@gmail.com</a></div>
+            <div class="info-row"><i class="fab fa-github"></i><a href="https://github.com/SomnathM41i" target="_blank">github.com/SomnathM41i</a></div>
+            <div class="info-row"><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/somnathm41i" target="_blank">linkedin.com/in/somnathm41i</a></div>
+            <div class="info-row"><i class="fas fa-blog"></i><a href="https://emperorofbattle.blogspot.com" target="_blank">emperorofbattle.blogspot.com</a></div>
+          </div>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Technical Arsenal</div>
-                <h2 class="section-title">Skills & Technologies</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Backend Development</h3>
-                    <ul class="skill-list">
-                        <li>PHP (Core & OOP)</li>
-                        <li>Laravel Framework</li>
-                        <li>CodeIgniter (3 & 4)</li>
-                        <li>RESTful API Design</li>
-                        <li>MVC Architecture</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-palette"></i> Frontend Development</h3>
-                    <ul class="skill-list">
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript & jQuery</li>
-                        <li>React.js</li>
-                        <li>Bootstrap & Material CSS</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Database & Storage</h3>
-                    <ul class="skill-list">
-                        <li>MySQL (Advanced Queries)</li>
-                        <li>PostgreSQL</li>
-                        <li>Query Optimization & Indexing</li>
-                        <li>Database Schema Design</li>
-                        <li>MongoDB Basics</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-terminal"></i> DevOps & Systems</h3>
-                    <ul class="skill-list">
-                        <li>Linux (Ubuntu/Debian)</li>
-                        <li>Bash Scripting</li>
-                        <li>Git & GitHub</li>
-                        <li>Docker & Docker Compose</li>
-                        <li>Apache & Nginx</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Development Tools</h3>
-                    <ul class="skill-list">
-                        <li>VS Code & PHPStorm</li>
-                        <li>Postman API Testing</li>
-                        <li>Composer & NPM</li>
-                        <li>Laravel Filament Admin</li>
-                        <li>PHPUnit Testing</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-shield-alt"></i> Cybersecurity Tools</h3>
-                    <ul class="skill-list">
-                        <li>Burp Suite (Web Pentesting)</li>
-                        <li>Nmap (Network Scanning)</li>
-                        <li>Metasploit Framework</li>
-                        <li>Wireshark (Packet Analysis)</li>
-                        <li>Hashcat & John the Ripper</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-user-secret"></i> Ethical Hacking</h3>
-                    <ul class="skill-list">
-                        <li>Hydra (Password Cracking)</li>
-                        <li>SQLMap (SQL Injection)</li>
-                        <li>Nikto & OWASP ZAP</li>
-                        <li>Web App Vulnerability Assessment</li>
-                        <li>CTF Participation</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-cogs"></i> Additional Technologies</h3>
-                    <ul class="skill-list">
-                        <li>Python (Scripting & Automation)</li>
-                        <li>RESTful API Design</li>
-                        <li>Payment Gateway Integration</li>
-                        <li>Role-Based Access Control</li>
-                        <li>CSRF & XSS Protection</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="cert-dark reveal d2">
+          <div class="cert-dark-label">active certification</div>
+          <div class="cert-dark-name">DROP Certified Security Course</div>
+          <div class="cert-dark-sub">Cyber Security & Ethical Hacking · DROP Organisation</div>
+          <div class="cert-dark-num">DCSC-SMN1223 · Issued August 18, 2024</div>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Portfolio</div>
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-description">
-                    Real-world applications serving real customers
-                </p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <span class="project-tag">LIVE</span>
-                    <div class="project-content">
-                        <i class="fas fa-store project-icon"></i>
-                        <h3>Lotus Brand Bazaar</h3>
-                        <p>
-                            High-traffic e-commerce platform serving Dombivli East, Thane. Built with Laravel,
-                            featuring secure authentication, role-based admin system, wallet management,
-                            and real-time payment integration.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Bootstrap</span>
-                            <span class="tech-tag">REST API</span>
-                            <span class="tech-tag">PhonePe</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/SomnathM41i" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="project-tag">CLIENT PROJECT</span>
-                    <div class="project-content">
-                        <i class="fas fa-coins project-icon"></i>
-                        <h3>Gold Loan Management System</h3>
-                        <p>
-                            Complete business management web application delivered for a Sangli-based client.
-                            Features dual-language support (Marathi/English), profit & loss tracking,
-                            employee management, and automated PDF reports.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">CodeIgniter 4</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Bootstrap 5</span>
-                            <span class="tech-tag">AJAX</span>
-                            <span class="tech-tag">PDF Generation</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/SomnathM41i" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="project-tag">PRODUCTION</span>
-                    <div class="project-content">
-                        <i class="fas fa-heart project-icon"></i>
-                        <h3>Matrimonial Platforms Suite</h3>
-                        <p>
-                            Contributed to frontend and backend development for multiple matrimonial platforms
-                            including Pavitralagna, Blesslagna, Yogyanati, Marathisoyrik, and Lagnachibedi.
-                            Handled user authentication, profile management, and matchmaking algorithms.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">REST API</span>
-                            <span class="tech-tag">Razorpay</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/SomnathM41i" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-content">
-                        <i class="fas fa-users project-icon"></i>
-                        <h3>CRM & Banking Applications</h3>
-                        <p>
-                            Developed enterprise-level CRM tools and banking-related applications with
-                            high-performance architecture. Implemented secure data handling, role-based
-                            permissions, and real-time transaction processing.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Security</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/SomnathM41i" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="info-card reveal d3">
+          <div class="info-card-head"><i class="fas fa-graduation-cap"></i> education.log</div>
+          <div class="info-rows">
+            <div class="info-row"><i class="fas fa-university"></i><span><strong>BCA</strong> — S. B. Deshmukh Mahavidyalaya, Atpadi<br><small style="color:var(--text-dim);font-size:11px">Jun 2022 – May 2025</small></span></div>
+            <div class="info-row"><i class="fas fa-school"></i><span><strong>HSC (12th)</strong> — Shriram High School, Karagani<br><small style="color:var(--text-dim);font-size:11px">Jun 2021 – May 2022</small></span></div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Career Journey</div>
-                <h2 class="section-title">Professional Experience</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3 class="timeline-title">Full Stack Developer</h3>
-                                <div class="timeline-company">CodeX Technologies, Mumbai</div>
-                            </div>
-                            <div class="timeline-date">June 2023 - Present</div>
-                        </div>
-                        <div class="timeline-description">
-                            <ul>
-                                <li>Developed and optimized RESTful APIs for authentication, wallet management, and
-                                    reward points system with secure and scalable performance</li>
-                                <li>Built role-based admin and super admin system for Lotus Brand Bazaar, improving
-                                    access control and operational security</li>
-                                <li>Contributed to full-stack development of 5+ matrimonial platforms serving thousands
-                                    of active users</li>
-                                <li>Designed and integrated payment gateway solutions (PhonePe, Razorpay) for real-time
-                                    secure financial transactions</li>
-                                <li>Developed CRM and banking applications with high-performance, secure architecture
-                                    following industry best practices</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+<div class="ch-divider"><div class="ch-divider-label">// Chapter 02 — Technical Arsenal</div></div>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3 class="timeline-title">Freelance Full Stack Developer</h3>
-                                <div class="timeline-company">Independent Projects</div>
-                            </div>
-                            <div class="timeline-date">Jan 2025 - Mar 2025</div>
-                        </div>
-                        <div class="timeline-description">
-                            <ul>
-                                <li>Delivered a complete Gold Loan Management System for a Sangli-based client using
-                                    CodeIgniter 4 and MySQL</li>
-                                <li>Implemented dual-language support (Marathi & English) with seamless switching
-                                    capability</li>
-                                <li>Built comprehensive APIs for profit & loss tracking, employee salary management,
-                                    borrowings, and gold loan operations</li>
-                                <li>Integrated CSRF protection, real-time AJAX updates, and automated PDF report
-                                    generation</li>
-                                <li>Completed 10-week MVP development cycle from requirements to deployment</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section id="skills">
+  <div class="section-wrap">
+    <div class="section-tag">Technical Arsenal</div>
+    <h2 class="section-title reveal">Skills &amp; <span class="accent">Technologies</span></h2>
+    <p class="section-desc reveal d1">Things I've actually used in projects that went to production. Not a wishlist.</p>
+    <div class="skills-grid reveal d2">
+      <div class="skill-cat">
+        <div class="skill-cat-head"><i class="fas fa-server"></i> Backend</div>
+        <div class="skill-tags">
+          <span class="skill-tag primary">PHP (OOP)</span><span class="skill-tag primary">Laravel</span><span class="skill-tag primary">Blade</span>
+          <span class="skill-tag primary">CodeIgniter 4</span><span class="skill-tag primary">CodeIgniter 3</span>
+          <span class="skill-tag">RESTful APIs</span><span class="skill-tag">MVC</span><span class="skill-tag">Composer</span>
         </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Credentials</div>
-                <h2 class="section-title">Certifications & Education</h2>
-            </div>
-            <div class="cert-grid">
-                <div class="cert-card">
-                    <i class="fas fa-shield-alt cert-icon"></i>
-                    <h3>DROP Certified Security Course</h3>
-                    <div class="cert-issuer">DROP Organization</div>
-                    <p>
-                        Successfully completed comprehensive training in web application penetration testing,
-                        ethical hacking, and secure web development practices. Validates expertise in
-                        cybersecurity principles and secure coding standards.
-                    </p>
-                    <div class="cert-id">
-                        Certificate No: DCSC-SMN1223 | Issued: August 18, 2024
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <i class="fas fa-graduation-cap cert-icon"></i>
-                    <h3>Bachelor of Computer Applications</h3>
-                    <div class="cert-issuer">Shrimant Babasaheb Deshmukh Mahavidyalaya</div>
-                    <p>
-                        Comprehensive education in computer science fundamentals, programming, database
-                        management, and software engineering. Strong foundation in algorithms, data structures,
-                        and web technologies.
-                    </p>
-                    <div class="cert-id">
-                        BCA | June 2022 - May 2025 | Atpadi, Maharashtra
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-head"><i class="fas fa-palette"></i> Frontend</div>
+        <div class="skill-tags">
+          <span class="skill-tag primary">React.js</span><span class="skill-tag primary">Vite</span>
+          <span class="skill-tag primary">Tailwind CSS</span><span class="skill-tag primary">JavaScript ES6+</span>
+          <span class="skill-tag">HTML5 / CSS3</span><span class="skill-tag">Bootstrap 5</span><span class="skill-tag">Framer Motion</span>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Let's Connect</div>
-                <h2 class="section-title">Get In Touch</h2>
-            </div>
-            <div class="contact-wrapper">
-                <div class="contact-intro">
-                    <h3>Have a project in mind?</h3>
-                    <p>
-                        Whether you need a robust PHP application, secure RESTful APIs, or a complete
-                        full-stack solution — I'm here to help. Let's build something great together.
-                    </p>
-                    <div class="contact-links">
-                        <a href="https://github.com/SomnathM41i" target="_blank" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/somnathm41i/" target="_blank" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:somnath.malim46@gmail.com" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://emperorofbattle.blogspot.com" target="_blank" title="Blog">
-                            <i class="fas fa-blog"></i>
-                        </a>
-                    </div>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>somnath.malim46@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 9022357293</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Karagani, Sangli, Maharashtra</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required placeholder="John Doe">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required placeholder="john@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required
-                                placeholder="Tell me about your project..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary submit-btn">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                        <div class="form-status" id="formStatus"></div>
-                    </form>
-                </div>
-            </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-head"><i class="fas fa-database"></i> Database</div>
+        <div class="skill-tags">
+          <span class="skill-tag primary">MySQL</span><span class="skill-tag">Schema Design</span>
+          <span class="skill-tag">Query Optimisation</span><span class="skill-tag">Indexing</span>
+          <span class="skill-tag">PostgreSQL</span><span class="skill-tag">Stored Procedures</span>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p class="footer-tagline">Code with purpose. Build with precision. Ship with confidence.</p>
-            <p>&copy; 2025 Somnath Mali. Built with precision and passion.</p>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-head"><i class="fas fa-credit-card"></i> Payments & APIs</div>
+        <div class="skill-tags">
+          <span class="skill-tag primary">PhonePe</span><span class="skill-tag primary">Razorpay</span>
+          <span class="skill-tag">Webhook Handling</span><span class="skill-tag">Reconciliation</span>
+          <span class="skill-tag">CSRF Protection</span><span class="skill-tag">JWT</span>
         </div>
-    </footer>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-head"><i class="fas fa-shield-alt"></i> Security</div>
+        <div class="skill-tags">
+          <span class="skill-tag cert">Burp Suite</span><span class="skill-tag cert">Nmap</span>
+          <span class="skill-tag cert">Metasploit</span><span class="skill-tag cert">SQLMap</span>
+          <span class="skill-tag cert">OWASP ZAP</span><span class="skill-tag cert">Wireshark</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-head"><i class="fas fa-user-secret"></i> Ethical Hacking</div>
+        <div class="skill-tags">
+          <span class="skill-tag cert">Hydra</span><span class="skill-tag cert">Nikto</span>
+          <span class="skill-tag cert">John the Ripper</span><span class="skill-tag cert">Hashcat</span>
+          <span class="skill-tag cert">Web App Pentest</span><span class="skill-tag cert">CTF</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-head"><i class="fas fa-terminal"></i> DevOps</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Git / GitHub</span><span class="skill-tag">Docker</span>
+          <span class="skill-tag">Linux (Ubuntu)</span><span class="skill-tag">Bash Scripting</span>
+          <span class="skill-tag">Apache / Nginx</span><span class="skill-tag">Postman</span>
+          <span class="skill-tag">Celery</span><span class="skill-tag">Redis</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-head"><i class="fas fa-robot"></i> AI &amp; Automation</div>
+        <div class="skill-tags">
+          <span class="skill-tag primary">FastAPI</span><span class="skill-tag primary">Python</span>
+          <span class="skill-tag primary">Groq (LLaMA)</span><span class="skill-tag">Google Gemini</span>
+          <span class="skill-tag">OCR (Tesseract / EasyOCR)</span><span class="skill-tag">Google OAuth</span>
+          <span class="skill-tag">SQLAlchemy</span><span class="skill-tag">Docker Compose</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-head"><i class="fas fa-tools"></i> Dev Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">VS Code</span><span class="skill-tag">PHPStorm</span>
+          <span class="skill-tag">PHPUnit</span><span class="skill-tag">Laravel Filament</span>
+          <span class="skill-tag">Composer</span><span class="skill-tag">NPM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        const menuOverlay = document.getElementById('menuOverlay');
+<div class="ch-divider"><div class="ch-divider-label">// Chapter 03 — Career Journey</div></div>
 
-        function toggleMenu() {
-            menuToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            menuOverlay.classList.toggle('active');
-            // Prevent body scroll when menu is open
-            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-        }
+<section id="experience">
+  <div class="section-wrap">
+    <div class="section-tag">Career Journey</div>
+    <h2 class="section-title reveal">Professional <span class="accent">Experience</span></h2>
+    <p class="section-desc reveal d1">Two years, a lot of caffeine, and more bugs than I'd like to admit.</p>
 
-        function closeMenu() {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+    <div class="exp-timeline">
+      <div class="exp-entry reveal">
+        <div class="exp-meta">
+          <span class="exp-badge current">Current</span>
+          <span class="exp-date">June 2023 – Present</span>
+        </div>
+        <div class="exp-title">Full Stack Developer</div>
+        <div class="exp-company"><i class="fas fa-building"></i> CodeX Technologies, Mumbai</div>
+        <div class="exp-items">
+          <div class="exp-item"><span class="arrow">›</span><span>Developed <strong>myvivahai</strong>, an AI-powered matrimonial biodata extraction &amp; matching platform using <strong>Python/FastAPI</strong>, React, and Tailwind CSS — integrating OCR document parsing and AI-driven matching via Groq &amp; Gemini</span></div>
+          <div class="exp-item"><span class="arrow">›</span><span>Developed and optimized RESTful APIs for authentication, wallet management, and reward points system with secure and scalable performance <span class="code">auth · wallet · rewards</span></span></div>
+          <div class="exp-item"><span class="arrow">›</span><span>Built role-based admin and super admin system for <strong>Lotus Brand Bazaar</strong>, improving access control and operational security for a high-traffic e-commerce platform</span></div>
+          <div class="exp-item"><span class="arrow">›</span><span>Contributed to full-stack development of <strong>25 matrimonial platforms in Maharashtra</strong> — each serving 10K to 50K users. End-to-end ownership from API design, database architecture, backend, frontend, CRM, and CMS.</span></div>
+          <div class="exp-item"><span class="arrow">›</span><span>Built and open-sourced <strong>Matrimony_Platform</strong>, a full-featured matrimony application with Laravel, featuring authentication, profile management, matchmaking, and an admin dashboard with Blade templating</span></div>
+          <div class="exp-item"><span class="arrow">›</span><span>Designed and integrated payment gateway solutions (<strong>PhonePe, Razorpay</strong>) for real-time secure financial transactions with webhook reconciliation</span></div>
+          <div class="exp-item"><span class="arrow">›</span><span>Developed CRM and banking applications with high-performance, secure architecture following industry best practices</span></div>
+        </div>
+        <div class="exp-stack">
+          <span class="stack-chip">Laravel</span><span class="stack-chip">CodeIgniter 4</span><span class="stack-chip">FastAPI</span><span class="stack-chip">Python</span>
+          <span class="stack-chip">MySQL</span><span class="stack-chip">REST APIs</span><span class="stack-chip">PhonePe</span><span class="stack-chip">Razorpay</span>
+          <span class="stack-chip">RBAC</span><span class="stack-chip">React</span><span class="stack-chip">Tailwind CSS</span><span class="stack-chip">Groq</span><span class="stack-chip">Gemini</span>
+        </div>
+      </div>
 
-        // Toggle menu on hamburger click
-        menuToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleMenu();
-        });
+      <div class="exp-entry past reveal d1">
+        <div class="exp-meta">
+          <span class="exp-badge freelance">Freelance</span>
+          <span class="exp-date">January 2025 – March 2025</span>
+        </div>
+        <div class="exp-title">Independent Full Stack Developer</div>
+        <div class="exp-company"><i class="fas fa-laptop-code"></i> Self-Directed · Sangli, Maharashtra</div>
+        <div class="exp-items">
+          <div class="exp-item"><span class="arrow">›</span><span>Delivered a complete <strong>Gold Loan Management System</strong> for a Sangli-based client using CodeIgniter 4 and MySQL — from zero to deployment</span></div>
+          <div class="exp-item"><span class="arrow">›</span><span>Implemented <strong>dual-language support (Marathi & English)</strong> with seamless switching capability and localized PDF report generation</span></div>
+          <div class="exp-item"><span class="arrow">›</span><span>Built comprehensive APIs for profit & loss tracking, employee salary management, borrowings, and gold loan operations with real-time AJAX updates</span></div>
+          <div class="exp-item"><span class="arrow">›</span><span>Integrated CSRF protection and completed full lifecycle from requirements to deployment within a <span class="code">10-week MVP cycle</span></span></div>
+        </div>
+        <div class="exp-stack">
+          <span class="stack-chip">CodeIgniter 4</span><span class="stack-chip">MySQL</span>
+          <span class="stack-chip">Bootstrap 5</span><span class="stack-chip">AJAX</span>
+          <span class="stack-chip">PDF Generation</span><span class="stack-chip">Marathi i18n</span><span class="stack-chip">CSRF</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                closeMenu();
-            });
-        });
+<div class="ch-divider"><div class="ch-divider-label">// Chapter 04 — Featured Projects</div></div>
 
-        // Close mobile menu when clicking on overlay
-        menuOverlay.addEventListener('click', () => {
-            closeMenu();
-        });
+<section id="projects">
+  <div class="section-wrap">
+    <div class="section-tag">Portfolio</div>
+    <h2 class="section-title reveal">Featured <span class="accent">Projects</span></h2>
+    <p class="section-desc reveal d1">Some of these are live with real users. Some are open source. All of them taught me something.</p>
+    <div class="projects-grid">
+      <div class="project-card ai-project reveal">
+        <div class="project-card-top">
+          <span class="project-status-badge live">Live</span>
+          <div class="project-icon-wrap"><i class="fas fa-heart"></i></div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">myvivahai</div>
+          <p class="project-story">AI-powered matrimonial biodata extraction & matching platform built during tenure at CodeX Technologies. Python/FastAPI backend with React frontend. Features OCR-based biodata parsing (Tesseract, EasyOCR), multilingual support (English, Hindi, Marathi), and AI-driven profile matching via Groq (LLaMA) and Google Gemini.</p>
+          <div class="project-impact">AI-powered matching · OCR biodata extraction · Dockerized · 3-language support</div>
+          <div class="project-tags">
+            <span class="project-tag">Python</span><span class="project-tag">FastAPI</span>
+            <span class="project-tag">React</span><span class="project-tag">Tailwind CSS</span><span class="project-tag">Groq</span><span class="project-tag">Gemini</span>
+            <span class="project-tag">OCR</span><span class="project-tag">Docker</span><span class="project-tag">MySQL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/SomnathM41i/myvivahai" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal d1">
+        <div class="project-card-top">
+          <span class="project-status-badge live">Live</span>
+          <div class="project-icon-wrap"><i class="fas fa-store"></i></div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">Lotus Brand Bazaar</div>
+          <p class="project-story">High-traffic e-commerce platform serving Dombivli East, Thane. Built with Laravel, featuring secure authentication, role-based admin system, wallet management, and real-time payment integration.</p>
+          <div class="project-impact">RBAC system · PhonePe payments live · Wallet & reward points in production</div>
+          <div class="project-tags">
+            <span class="project-tag">Laravel</span><span class="project-tag">MySQL</span>
+            <span class="project-tag">Bootstrap</span><span class="project-tag">PhonePe API</span><span class="project-tag">RBAC</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/SomnathM41i" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal d2">
+        <div class="project-card-top">
+          <span class="project-status-badge client">Freelance · Delivered</span>
+          <div class="project-icon-wrap"><i class="fas fa-coins"></i></div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">Gold Loan Management System</div>
+          <p class="project-story">Complete business management web application delivered for a Sangli-based client. Features dual-language support (Marathi/English), profit & loss tracking, employee management, and automated PDF reports.</p>
+          <div class="project-impact">Dual-language (Marathi/English) · PDF automation · Solo, 8-week delivery</div>
+          <div class="project-tags">
+            <span class="project-tag">CodeIgniter 4</span><span class="project-tag">MySQL</span>
+            <span class="project-tag">Bootstrap 5</span><span class="project-tag">AJAX</span><span class="project-tag">i18n</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/SomnathM41i" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal d3">
+        <div class="project-card-top">
+          <span class="project-status-badge live">Live</span>
+          <div class="project-icon-wrap"><i class="fas fa-heart"></i></div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">Matrimonial Platform Suite</div>
+          <p class="project-story">Contributed to frontend and backend development for <strong>25 matrimonial platforms</strong> in Maharashtra — each serving 10K to 50K users. Handled end-to-end development from API design, database architecture, backend, frontend, CRM, and CMS.</p>
+          <div class="project-impact">25 live platforms · Razorpay integrated · 10K–50K users per platform</div>
+          <div class="project-tags">
+            <span class="project-tag">Laravel</span><span class="project-tag">React</span>
+            <span class="project-tag">MySQL</span><span class="project-tag">Razorpay</span><span class="project-tag">REST API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/SomnathM41i" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal d4">
+        <div class="project-card-top">
+          <span class="project-status-badge live">Live</span>
+          <div class="project-icon-wrap"><i class="fas fa-heart"></i></div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">Matrimony_Platform</div>
+          <p class="project-story">Matrimony platform developed during tenure at CodeX Technologies using Laravel. Features user authentication, profile management, matchmaking, admin dashboard, and Blade-templated UI.</p>
+          <div class="project-impact">Laravel · Blade templating · Full CRUD · Open source</div>
+          <div class="project-tags">
+            <span class="project-tag">Laravel</span><span class="project-tag">Blade</span>
+            <span class="project-tag">MySQL</span><span class="project-tag">PHP</span><span class="project-tag">Bootstrap</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/SomnathM41i/Matrimony_Platform" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal d5">
+        <div class="project-card-top">
+          <span class="project-status-badge prod">Enterprise · Internal</span>
+          <div class="project-icon-wrap"><i class="fas fa-landmark"></i></div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">CRM & Banking Applications</div>
+          <p class="project-story">Developed enterprise-level CRM tools and banking-related applications with high-performance architecture. Implemented secure data handling, role-based permissions, and real-time transaction processing.</p>
+          <div class="project-impact">High-concurrency MySQL · Zero-trust RBAC · Audit-ready transaction logs</div>
+          <div class="project-tags">
+            <span class="project-tag">PHP</span><span class="project-tag">Laravel</span>
+            <span class="project-tag">MySQL</span><span class="project-tag">Security-First</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/SomnathM41i" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        // Prevent menu from closing when clicking inside the nav links
-        navLinks.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
+<div class="ch-divider"><div class="ch-divider-label">// Chapter 05 — Credentials</div></div>
 
+<section id="certifications">
+  <div class="section-wrap">
+    <div class="section-tag">Credentials</div>
+    <h2 class="section-title reveal">Certifications <span class="accent">&amp; Education</span></h2>
+    <p class="section-desc reveal d1">Not collecting certificates for the sake of it. These ones actually matter.</p>
+    <div class="cert-grid">
+      <div class="cert-block reveal">
+        <div class="cert-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+        <div class="cert-name">DROP Certified Security Course</div>
+        <div class="cert-issuer">DROP Organization · Cybersecurity & Ethical Hacking</div>
+        <p class="cert-story">Successfully completed comprehensive training in web application penetration testing, ethical hacking, and secure web development practices. Validates expertise in cybersecurity principles and secure coding standards.</p>
+        <div class="cert-id">Certificate No: DCSC-SMN1223 · Issued: August 18, 2024</div>
+      </div>
+      <div class="cert-block reveal d1">
+        <div class="cert-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+        <div class="cert-name">Bachelor of Computer Applications</div>
+        <div class="cert-issuer">Shrimant Babasaheb Deshmukh Mahavidyalaya · Atpadi</div>
+        <p class="cert-story">Comprehensive education in computer science fundamentals, programming, database management, and software engineering. Strong foundation in algorithms, data structures, and web technologies.</p>
+        <div class="cert-id">BCA · June 2022 – May 2025 · Atpadi, Maharashtra</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+<div class="ch-divider"><div class="ch-divider-label">// Chapter 06 — Let's Connect</div></div>
 
-        // Fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+<section id="contact">
+  <div class="section-wrap">
+    <div class="section-tag">Let's Connect</div>
+    <h2 class="section-title reveal">Get <span class="accent">In Touch</span></h2>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-story reveal d1">If you're building something that needs to handle real traffic, real money, or real users — and you want someone who's been through the pain of production — let's talk. I'm not here to sell you a dream, I'm here to ship working software.</p>
+        <div class="contact-channels reveal d2">
+          <a href="mailto:somnath.malim46@gmail.com" class="channel-btn"><i class="fas fa-envelope"></i> somnath.malim46@gmail.com</a>
+          <a href="tel:+919022357293" class="channel-btn"><i class="fas fa-phone"></i> +91 9022357293</a>
+          <span class="channel-btn"><i class="fas fa-map-marker-alt"></i> Karagani, Sangli, Maharashtra</span>
+          <a href="https://emperorofbattle.blogspot.com" target="_blank" class="channel-btn"><i class="fas fa-blog"></i> emperorofbattle.blogspot.com</a>
+        </div>
+        <div class="social-row reveal d3">
+          <a href="https://github.com/SomnathM41i" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/somnathm41i/" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:somnath.malim46@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://emperorofbattle.blogspot.com" target="_blank" class="social-btn" title="Blog"><i class="fas fa-blog"></i></a>
+        </div>
+      </div>
+      <div class="contact-form reveal d2">
+        <div class="form-head"><i class="fas fa-terminal"></i> send_message.php</div>
+        <div class="form-body">
+          <form id="contactForm">
+            <div class="form-group"><label>// your_name</label><input type="text" name="name" required placeholder="e.g. Priya Sharma"></div>
+            <div class="form-group"><label>// email_address</label><input type="email" name="email" required placeholder="priya@company.in"></div>
+            <div class="form-group"><label>// subject</label><input type="text" name="subject" required placeholder="Job Opportunity / Project / Freelance"></div>
+            <div class="form-group"><label>// message</label><textarea name="message" required placeholder="Tell me what you're building and what you need..."></textarea></div>
+            <button type="submit" class="form-submit"><i class="fas fa-paper-plane"></i> send_message()</button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><span class="bracket">&lt;</span>Emperor<span class="bracket">/&gt;</span></div>
+    <div class="footer-tagline">Built with PHP, regret, and a dream that one day my code will have fewer bugs.</div>
+    <div class="footer-copy">&copy; 2025 Somnath Mali</div>
+  </div>
+</footer>
 
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Active navigation highlight
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-links a');
-
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Contact Form Handling
-        const contactForm = document.getElementById('contactForm');
-        const formStatus = document.getElementById('formStatus');
-
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const submitBtn = contactForm.querySelector('.submit-btn');
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-
-            // Disable submit button
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-            // Simulate form submission (replace with your actual endpoint)
-            try {
-                // In a real scenario, you would send data to your backend
-                // await fetch('your-endpoint-url', {
-                //     method: 'POST',
-                //     headers: { 'Content-Type': 'application/json' },
-                //     body: JSON.stringify(data)
-                // });
-
-                // For demo purposes, we'll simulate a successful submission
-                await new Promise(resolve => setTimeout(resolve, 1500));
-
-                // Show success message
-                formStatus.className = 'form-status success';
-                formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
-
-                // Reset form
-                contactForm.reset();
-
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    formStatus.style.display = 'none';
-                }, 5000);
-
-            } catch (error) {
-                // Show error message
-                formStatus.className = 'form-status error';
-                formStatus.textContent = '✗ Something went wrong. Please try again or email me directly.';
-            } finally {
-                // Re-enable submit button
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-            }
-        });
-    </script>
+<script src="js/script.js"></script>
 </body>
-
 </html>
