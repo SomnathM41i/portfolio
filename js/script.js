@@ -62,7 +62,7 @@ if (contactForm) {
       formStatus.textContent = '✗ Something went wrong. Please try again or email me directly.';
     } finally {
       btn.disabled = false;
-      btn.innerHTML = '<i class="fas fa-paper-plane"></i> send_message()';
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
       setTimeout(() => { formStatus.style.display = 'none'; }, 5000);
     }
   });
