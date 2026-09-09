@@ -21,6 +21,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-sans);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.7}
+body.no-scroll{overflow:hidden}
 ::selection{background:var(--green);color:#000}
 a{color:var(--green);text-decoration:none;transition:color .2s}
 a:hover{color:#fff}
@@ -31,7 +32,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 ::-webkit-scrollbar-thumb:hover{background:var(--green)}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,17,23,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+nav{position:fixed;top:0;left:0;right:0;z-index:960;background:rgba(13,17,23,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:56px}
 .brand-logo{font-family:var(--font-sans);font-size:19px;font-weight:800;color:var(--text);letter-spacing:-.4px;display:flex;align-items:center;gap:5px}
 .brand-logo .brand-accent{color:var(--green)}
@@ -52,6 +53,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,17,23,.92
 .section-title .accent{color:var(--green)}
 .section-desc{font-size:16px;color:var(--text-muted);margin-bottom:48px;max-width:520px}
 .section-sep{height:1px;background:var(--border);margin:0 32px}
+section[id]{scroll-margin-top:64px}
+.mobile-drawer,.drawer-backdrop{display:none}
 
 /* PROFILE CARD */
 .profile-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden}

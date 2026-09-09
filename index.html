@@ -29,7 +29,7 @@
 <nav>
   <div class="nav-inner">
     <a class="brand-logo" href="#home">Somnath <span class="brand-accent">Mali</span></a>
-    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation" aria-controls="mobileDrawer" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -40,6 +40,31 @@
     </ul>
   </div>
 </nav>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <a class="drawer-brand" href="#home">Somnath <span class="brand-accent">Mali</span></a>
+    <span class="drawer-status"><span class="drawer-dot"></span> Available</span>
+  </div>
+  <ul class="drawer-links" id="drawerNavLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="drawer-foot">
+    <div class="drawer-social">
+      <a href="https://github.com/SomnathM41i" target="_blank" rel="noopener" class="social-btn" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/somnathm41i/" target="_blank" rel="noopener" class="social-btn" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:somnath.malim46@gmail.com" class="social-btn" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <a class="drawer-resume" href="https://drive.google.com/uc?export=download&id=1_EduZ3cIOUjwapTjxGZnWtc9NSemnKzh" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Download Resume</a>
+    <div class="drawer-loc"><i class="fas fa-map-marker-alt"></i> Mumbai / Remote</div>
+  </div>
+</div>
 
 <section class="hero" id="home">
   <div class="hero-grid">

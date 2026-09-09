@@ -1,16 +1,53 @@
 const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
+const drawer = document.getElementById('mobileDrawer');
+const drawerBackdrop = document.getElementById('drawerBackdrop');
+
+const openDrawer = () => {
+  drawer.classList.add('open');
+  drawerBackdrop.classList.add('open');
+  hamburger.classList.add('open');
+  document.body.classList.add('no-scroll');
+  drawer.setAttribute('aria-hidden', 'false');
+  drawerBackdrop.setAttribute('aria-hidden', 'false');
+  hamburger.setAttribute('aria-expanded', 'true');
+};
+
+const closeDrawer = () => {
+  drawer.classList.remove('open');
+  drawerBackdrop.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.classList.remove('no-scroll');
+  drawer.setAttribute('aria-hidden', 'true');
+  drawerBackdrop.setAttribute('aria-hidden', 'true');
+  hamburger.setAttribute('aria-expanded', 'false');
+};
 
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  navLinks.classList.toggle('open');
+  drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+});
+drawerBackdrop.addEventListener('click', closeDrawer);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeDrawer();
 });
 
-document.querySelectorAll('.nav-links a').forEach(a => {
-  a.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    navLinks.classList.remove('open');
+document.querySelectorAll('.nav-links a, .drawer-links a').forEach(a => {
+  a.addEventListener('click', closeDrawer);
+});
+
+const spySectionIds = ['about', 'skills', 'experience', 'projects', 'certifications', 'contact'];
+const navAnchors = document.querySelectorAll('.nav-links a, .drawer-links a');
+const spyObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const id = '#' + e.target.id;
+      navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === id));
+    }
   });
+}, { rootMargin: '-40% 0px -55% 0px' });
+
+spySectionIds.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) spyObserver.observe(el);
 });
 
 const revealObserver = new IntersectionObserver((entries) => {
