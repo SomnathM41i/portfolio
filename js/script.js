@@ -29,6 +29,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
+const FORM_ENDPOINT = 'https://formspree.io/f/mzebyvoj';
+
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
 
@@ -36,21 +38,32 @@ if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = contactForm.querySelector('.form-submit');
+    const data = Object.fromEntries(new FormData(contactForm).entries());
     btn.disabled = true;
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> sending...';
+    formStatus.className = 'form-status';
+    formStatus.style.display = 'block';
 
     try {
-      await new Promise(r => setTimeout(r, 1500));
-      formStatus.className = 'form-status success';
-      formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
-      contactForm.reset();
-      setTimeout(() => { formStatus.style.display = 'none'; }, 5000);
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        formStatus.className = 'form-status success';
+        formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+        contactForm.reset();
+      } else {
+        throw new Error('Formspree request failed');
+      }
     } catch {
       formStatus.className = 'form-status error';
       formStatus.textContent = '✗ Something went wrong. Please try again or email me directly.';
     } finally {
       btn.disabled = false;
       btn.innerHTML = '<i class="fas fa-paper-plane"></i> send_message()';
+      setTimeout(() => { formStatus.style.display = 'none'; }, 5000);
     }
   });
 }
