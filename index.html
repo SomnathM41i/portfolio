@@ -169,8 +169,8 @@
         <div class="info-card reveal d3">
           <div class="info-card-head"><i class="fas fa-graduation-cap"></i> Education</div>
           <div class="info-rows">
-            <div class="info-row"><i class="fas fa-university"></i><span><strong>BCA</strong> — S. B. Deshmukh Mahavidyalaya, Atpadi<br><small style="color:var(--text-dim);font-size:11px">Jun 2022 – May 2025</small></span></div>
-            <div class="info-row"><i class="fas fa-school"></i><span><strong>HSC (12th)</strong> — Shriram High School, Karagani<br><small style="color:var(--text-dim);font-size:11px">Jun 2021 – May 2022</small></span></div>
+            <div class="info-row"><i class="fas fa-university"></i><span><strong>BCA</strong> — S. B. Deshmukh Mahavidyalaya, Atpadi<br><small class="info-date">Jun 2022 – May 2025</small></span></div>
+            <div class="info-row"><i class="fas fa-school"></i><span><strong>HSC (12th)</strong> — Shriram High School, Karagani<br><small class="info-date">Jun 2021 – May 2022</small></span></div>
           </div>
         </div>
       </div>
@@ -493,13 +493,13 @@
       <div class="contact-form reveal d2">
         <div class="form-head"><i class="fas fa-envelope-open-text"></i> Contact Form</div>
         <div class="form-body">
-          <form id="contactForm">
+          <form id="contactForm" data-endpoint="https://formspree.io/f/mzebyvoj">
             <div class="form-group"><label for="fname">Your Name</label><input type="text" id="fname" name="name" required placeholder="e.g. Priya Sharma"></div>
             <div class="form-group"><label for="femail">Email Address</label><input type="email" id="femail" name="email" required placeholder="priya@company.in"></div>
             <div class="form-group"><label for="fsubject">Subject</label><input type="text" id="fsubject" name="subject" required placeholder="Job Opportunity / Project / Freelance"></div>
             <div class="form-group"><label for="fmessage">Message</label><textarea id="fmessage" name="message" required placeholder="Tell me what you're building and what you need..."></textarea></div>
             <button type="submit" class="form-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
-            <div class="form-status" id="formStatus"></div>
+            <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
           </form>
         </div>
       </div>
@@ -515,6 +515,8 @@
   </div>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/reveal.js"></script>
+<script src="js/contact-form.js"></script>
 </body>
 </html>
