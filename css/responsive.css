@@ -15,8 +15,8 @@
   .scroll-cue{display:none}
 
   /* MOBILE DRAWER */
-  .mobile-drawer{display:flex;position:fixed;top:0;right:0;bottom:0;width:min(320px,86vw);z-index:950;flex-direction:column;background:linear-gradient(180deg,#161b22,#0d1117);border-left:1px solid var(--border);border-radius:16px 0 0 16px;box-shadow:-24px 0 60px rgba(0,0,0,.55);transform:translateX(105%);transition:transform .45s cubic-bezier(.22,1,.36,1);overflow:hidden}
-  .mobile-drawer::before{content:'';position:absolute;top:-120px;right:-120px;width:340px;height:340px;background:radial-gradient(circle,rgba(0,255,157,.14),transparent 65%);pointer-events:none}
+  .mobile-drawer{display:flex;position:fixed;top:0;left:0;bottom:0;width:min(320px,86vw);z-index:950;flex-direction:column;background:linear-gradient(180deg,#161b22,#0d1117);border-right:1px solid var(--border);border-radius:0 16px 16px 0;box-shadow:24px 0 60px rgba(0,0,0,.55);transform:translateX(-105%);transition:transform .45s cubic-bezier(.22,1,.36,1);overflow:hidden}
+  .mobile-drawer::before{content:'';position:absolute;top:-120px;left:-120px;width:340px;height:340px;background:radial-gradient(circle,rgba(0,255,157,.14),transparent 65%);pointer-events:none}
   .mobile-drawer::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,255,157,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,157,.03) 1px,transparent 1px);background-size:36px 36px;pointer-events:none}
   .mobile-drawer.open{transform:translateX(0)}
   .drawer-backdrop{display:block;position:fixed;inset:0;z-index:940;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s}
@@ -28,8 +28,8 @@
   .drawer-status{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;color:var(--green);background:var(--green-soft);border:1px solid rgba(0,255,157,.25);padding:5px 11px;border-radius:20px}
   .drawer-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite}
 
-  .drawer-links{list-style:none;display:flex;flex-direction:column;gap:3px;padding:18px 14px;flex:1;overflow-y:auto;justify-content:center;counter-reset:menu;position:relative;z-index:1}
-  .drawer-links li{counter-increment:menu;opacity:0;transform:translateX(18px)}
+  .drawer-links{list-style:none;display:flex;flex-direction:column;gap:3px;padding:18px 14px;flex:1;overflow-y:auto;justify-content:center;position:relative;z-index:1}
+  .drawer-links li{opacity:0;transform:translateX(18px)}
   .mobile-drawer.open .drawer-links li{animation:navIn .45s cubic-bezier(.22,1,.36,1) forwards}
   .mobile-drawer.open .drawer-links li:nth-child(1){animation-delay:.06s}
   .mobile-drawer.open .drawer-links li:nth-child(2){animation-delay:.12s}
@@ -38,13 +38,11 @@
   .mobile-drawer.open .drawer-links li:nth-child(5){animation-delay:.30s}
   .mobile-drawer.open .drawer-links li:nth-child(6){animation-delay:.36s}
   @keyframes navIn{to{opacity:1;transform:none}}
-  .drawer-links li::before{content:'0' counter(menu);font-family:var(--font-mono);font-size:11px;color:var(--text-dim);padding-left:6px}
-  .drawer-links a{display:flex;align-items:center;gap:14px;padding:13px 14px;font-size:16px;font-weight:600;color:var(--text-muted);border-radius:8px;border-left:3px solid transparent;transition:all .2s}
+  .drawer-links a{display:flex;align-items:center;gap:10px;padding:13px 16px;font-size:16px;font-weight:600;color:var(--text-muted);border-radius:8px;border-left:3px solid transparent;transition:all .2s}
   .drawer-links a::after{content:'\2192';margin-left:auto;font-size:15px;opacity:0;transform:translateX(-6px);transition:all .2s}
   .drawer-links a:hover{color:var(--green);background:var(--green-soft)}
   .drawer-links a:hover::after,.drawer-links a.active::after{opacity:1;transform:none}
   .drawer-links a.active{color:var(--green);border-left-color:var(--green);background:linear-gradient(90deg,rgba(0,255,157,.1),transparent)}
-  .drawer-links li:has(a.active)::before{color:var(--green)}
 
   .drawer-foot{border-top:1px solid var(--border2);padding:18px 20px 24px;display:grid;gap:14px;position:relative;z-index:1}
   .drawer-social{display:flex;gap:8px}
