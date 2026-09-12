@@ -232,7 +232,32 @@
     }
   });
 
-  /* ---------- IP / geo (with fallbacks) ---------- */
+  /* ---------- IP / geo (IPv4 first, with fallbacks) ---------- */
+
+  function getRawIpv4() {
+    // IPv4-only endpoints — these force an IPv4 path to the visitor's network.
+    return fetch('https://api4.ipify.org?format=json')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (j) { return j.ip || Promise.reject(); });
+  }
+
+  function getRawIpAny() {
+    return fetch('https://api.ipify.org?format=json')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (j) { return j.ip || Promise.reject(); });
+  }
+
+  function getRawIpv6() {
+    return fetch('https://api6.ipify.org?format=json')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (j) { return j.ip || Promise.reject(); });
+  }
+
+  function geoFrom(ip, source) {
+    return fetch('https://ipwho.is/' + encodeURIComponent(ip))
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (j) { j._source = source; return normalizeIp(j); });
+  }
 
   function ipWhoIs() {
     return fetch('https://ipwho.is/').then(function (r) { return r.ok ? r.json() : Promise.reject(); });
@@ -263,15 +288,26 @@
   }
 
   function fetchIp() {
-    return ipWhoIs()
-      .then(function (j) { j._source = 'ipwho.is'; return normalizeIp(j); })
+    // 1) Best: real IPv4 from an IPv4-only endpoint, geolocated by ipwho.is.
+    return getRawIpv4()
+      .then(function (ip) { return geoFrom(ip, 'ipwho.is (IPv4)'); })
       .catch(function () {
-        return ipApiCo()
-          .then(function (j) { j._source = 'ipapi.co'; return normalizeIp(j); })
+        // 2) Fallback: whatever IP the network hands out (may be IPv6).
+        return getRawIpAny()
+          .then(function (ip) { return geoFrom(ip, 'ipwho.is'); })
           .catch(function () {
-            return freeIpApi()
-              .then(function (j) { j._source = 'freeipapi.com'; return normalizeIp(j); })
-              .catch(function () { return null; });
+            // 3) Fallback: plain geo APIs.
+            return ipWhoIs()
+              .then(function (j) { j._source = 'ipwho.is'; return normalizeIp(j); })
+              .catch(function () {
+                return ipApiCo()
+                  .then(function (j) { j._source = 'ipapi.co'; return normalizeIp(j); })
+                  .catch(function () {
+                    return freeIpApi()
+                      .then(function (j) { j._source = 'freeipapi.com'; return normalizeIp(j); })
+                      .catch(function () { return null; });
+                  });
+              });
           });
       });
   }
@@ -290,6 +326,10 @@
         data.ip = geo;
         ipDone = true;
         send();
+      });
+      // Best-effort IPv6 address too — never blocks the email.
+      withTimeout(getRawIpv6(), TIMEOUT_MS).then(function (v6) {
+        if (v6 && v6.indexOf(':') !== -1) data.ipv6 = v6;
       });
       return;
     }
