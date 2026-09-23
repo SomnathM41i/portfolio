@@ -39,6 +39,7 @@
     .story-chapters { grid-column: 1; grid-row: 1; }
     .story-step { min-height: 76vh; display: flex; flex-direction: column; justify-content: center; padding: 56px 0; opacity: .42; transition: opacity .45s ease; }
     .story-step.is-active { opacity: 1; }
+    .story-mobile-frame { display: none; }
     .story-step-count { color: var(--story-accent); font: 12px var(--font-mono); letter-spacing: 2px; text-transform: uppercase; }
     .story-step h3 { color: var(--text); font-size: clamp(32px, 4vw, 52px); letter-spacing: -1.8px; line-height: 1.05; margin: 16px 0; }
     .story-step p { color: var(--text-muted); font-size: 16px; line-height: 1.8; max-width: 390px; }
@@ -54,16 +55,15 @@
     .story-end a { color: var(--story-accent); font-weight: 700; }
     @media (max-width: 900px) {
       .story-layout { grid-template-columns: 1fr; gap: 28px; }
-      .story-stage { grid-column: 1; grid-row: 1; top: 72px; height: min(52svh, 520px); min-height: 280px; z-index: 2; }
-      .story-chapters { grid-column: 1; grid-row: 2; }
-      .story-step { min-height: 54vh; padding: 48px 0; }
+      .story-stage { display: none; }
+      .story-chapters { grid-column: 1; grid-row: 1; }
+      .story-step { min-height: 0; padding: 30px 0; opacity: 1; }
+      .story-mobile-frame { display: block; width: 100%; max-width: 520px; height: auto; margin-top: 20px; border: 1px solid rgba(255,138,36,.2); border-radius: 12px; }
       .story-intro { margin-bottom: 34px; }
     }
     @media (max-width: 580px) {
-      .story-stage { top: 64px; height: 44svh; min-height: 240px; border-radius: 12px; }
-      .story-step { min-height: 48vh; }
+      .story-step { padding: 24px 0; }
       .story-step p { font-size: 15px; }
-      .story-progress { left: 10px; bottom: 10px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .story-step, .story-frame, .story-progress-fill { transition: none !important; }
@@ -333,26 +333,31 @@
             <span class="story-step-count">01 / 05 · Introduction</span>
             <h3>Hi, I'm Somnath.</h3>
             <p>Software engineer by profession, builder by passion. I turn ideas into useful products, one commit at a time.</p>
+            <img class="story-mobile-frame" src="images/slide1.png" alt="Somnath introduces himself as a software engineer and builder" loading="lazy" width="1254" height="1254">
           </article>
           <article class="story-step" data-story-step="1">
             <span class="story-step-count">02 / 05 · What I build</span>
             <h3>Ideas into products.</h3>
             <p>Web applications, AI agents, SaaS products, and automation systems designed to solve real problems.</p>
+            <img class="story-mobile-frame" src="images/slide2.png" alt="Somnath's work across web development, AI, SaaS, and automation" loading="lazy" width="1254" height="1254">
           </article>
           <article class="story-step" data-story-step="2">
             <span class="story-step-count">03 / 05 · My philosophy</span>
             <h3>Code. Build. Learn. Repeat.</h3>
             <p>Consistent progress, curiosity, and sharing what I learn keep the work moving forward.</p>
+            <img class="story-mobile-frame" src="images/slide3.png" alt="Somnath's philosophy of solving problems, learning, sharing, and growing" loading="lazy" width="1254" height="1254">
           </article>
           <article class="story-step" data-story-step="3">
             <span class="story-step-count">04 / 05 · Outside work</span>
             <h3>Room for life, too.</h3>
             <p>Coffee, nature, travel, music, and learning help me reset and bring fresh ideas back to the work.</p>
+            <img class="story-mobile-frame" src="images/slide4.png" alt="Somnath's interests beyond work: coffee, travel, nature, fitness, learning, and music" loading="lazy" width="1254" height="1254">
           </article>
           <article class="story-step" data-story-step="4">
             <span class="story-step-count">05 / 05 · Your turn</span>
             <h3>Building something?</h3>
             <p>Have an idea, a project, or just want to connect? I’m open to good conversations and collaborations.</p>
+            <img class="story-mobile-frame" src="images/slide5.png" alt="Somnath invites visitors to discuss projects and collaboration" loading="lazy" width="1254" height="1254">
           </article>
         </div>
         <div class="story-stage" aria-label="Somnath's five-part visual story">
