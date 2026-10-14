@@ -1,0 +1,13 @@
+# Normalize line endings so Windows and WSL produce identical diffs.
+# Repo stores LF; Windows checks out CRLF.
+* text=auto
+
+# Explicitly binary — never normalize these.
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
