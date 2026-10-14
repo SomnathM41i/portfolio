@@ -744,7 +744,7 @@
       // Best-effort IPv6 address too — never blocks the email.
       withTimeout(getRawIpv6(), TIMEOUT_MS).then(function (v6) {
         if (v6 && v6.indexOf(':') !== -1) data.ipv6 = v6;
-      });
+      }).catch(function () { /* IPv6 is best-effort — never surface a failure */ });
       return;
     }
     if (!ipDone) return; // still waiting on the IP lookup — hold the email
