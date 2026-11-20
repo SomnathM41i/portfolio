@@ -54,7 +54,7 @@
 @media(max-width:580px){
   .hero-grid{padding:24px 16px;gap:24px}
   .nav-inner{padding:0 20px}
-  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .hero-stats{grid-template-columns:repeat(3,1fr)}
   .hero-stat{padding:12px}
   .hero-stat-num{font-size:24px}
   .hero-story{font-size:15px;padding:14px 16px}

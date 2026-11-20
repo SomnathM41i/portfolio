@@ -61,7 +61,7 @@
       run() {
         out('Somnath Mali — Full-Stack Developer');
         out('PHP · Laravel · CodeIgniter · Python · FastAPI · React');
-        out('CodeX Technologies, Mumbai · June 2023 – present');
+        out('CodeX Technologies, Mumbai · December 2024 – present');
       },
     },
 
@@ -89,7 +89,8 @@
       about: 'where I have worked',
       run() {
         out(hl('CodeX Technologies') + ' — Full-Stack Developer, Mumbai');
-        out(dim('  June 2023 – present'));
+        out(dim('  December 2024 – present'));
+        out(dim('  Intern, June 2024 – December 2024'));
         out('  · REST APIs for auth, wallet and reward points');
         out('  · Role-based admin/super-admin systems');
         out('  · PhonePe and Razorpay payment integrations');

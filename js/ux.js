@@ -1,4 +1,4 @@
-/* ux.js — progressive-enhancement layer shared by index.html and story.html.
+/* ux.js — progressive-enhancement layer for index.html.
    Covers: scroll progress bar, back-to-top, hero typewriter, stat counters,
    copy-to-clipboard chips, the returning-visitor toast, and the local
    visit/streak counter.

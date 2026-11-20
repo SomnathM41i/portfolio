@@ -43,7 +43,7 @@ def main():
     d.text((82, 92), "SM", font=F("arialbd.ttf", 52), fill=GREEN)
 
     # availability line
-    d.rounded_rectangle([200, 72, 356, 102], radius=15, fill=(0, 255, 157, 255))
+    d.rounded_rectangle([200, 72, 418, 102], radius=15, fill=(0, 255, 157, 255))
     d.text((214, 77), "AVAILABLE FOR HIRE", font=F("arialbd.ttf", 16), fill=(0, 0, 0))
 
     # name + role
@@ -55,16 +55,16 @@ def main():
     d.line([(60, 470), (1140, 470)], fill=BORDER, width=2)
 
     # bottom tagline
-    d.text((60, 496), "Production fintech systems · Payments · AI/LLM · Security (DCSC)", font=F("segoeui.ttf", 26), fill=TEXT)
+    d.text((60, 496), "Fintech · Payments · AI/LLM · Security", font=F("segoeui.ttf", 26), fill=TEXT)
     d.text((60, 546), "somnathm41i-portfolio.vercel.app", font=F("consola.ttf", 24), fill=GREEN_DIM)
 
     # bottom-right stats
-    stats = [("3+", "Years"), ("25+", "Platforms"), ("10K-50K", "Users")]
+    stats = [("2+", "Years"), ("20+", "Platforms"), ("10K-50K", "Users")]
     x = 640
     for num, label in stats:
         d.text((x, 496), num, font=F("arialbd.ttf", 44), fill=GREEN)
         d.text((x, 552), label, font=F("segoeui.ttf", 20), fill=MUTED)
-        x += 190
+        x += 150
 
     out = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "og-image.png")
     img.save(out, "PNG")
